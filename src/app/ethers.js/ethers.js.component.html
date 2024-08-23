@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>MetaMask Connection</h1>
+  <p>ethers.js works!</p>
+  <div class="card">
+    <div class="card-content">
+      <button (click)="connectMetaMask()" class="btn">Conectar MetaMask</button>
+      <div *ngIf="account" class="wallet-info">
+        <p><strong>Cuenta Conectada:</strong> {{ account }}</p>
+        <p><strong>Balance:</strong> {{ balance }} ETH</p>
+      </div>
+    </div>
+  </div>
+</div>
