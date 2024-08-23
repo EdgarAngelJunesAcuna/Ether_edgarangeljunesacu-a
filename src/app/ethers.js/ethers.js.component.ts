@@ -22,7 +22,7 @@ export class EthersJsComponent implements OnInit {
   targetAccount: string = '';
 
   private readonly REWARD_INTERVAL = 3600000; // 1 hora en milisegundos
-  private readonly REWARD_AMOUNT = "0.01"; // Cantidad de ETH a enviar como recompensa
+  private readonly REWARD_AMOUNT = "0.01"; // Cantidad de ETH a enviar como recompensa a mas
 
   constructor(private cd: ChangeDetectorRef) {}
 
