@@ -1,0 +1,31 @@
+<div class="truffle-container">
+    <h1>Consulta de Cuenta Ethereum</h1>
+    
+    <label for="accountInput">Introduce la dirección de la cuenta:</label>
+    <input id="accountInput" (input)="onAccountInput($event)" placeholder="0x..." class="truffle-input" />
+  
+    <button (click)="fetchAccountInfo()" class="truffle-btn">Obtener Información</button>
+  
+    <div *ngIf="account && balance !== undefined && transactionCount !== undefined" class="info-box">
+      <h2>Información de la Cuenta</h2>
+
+      <div class="info-card">
+        <p><strong>Cuenta:</strong></p>
+        <p>{{ account }}</p>
+      </div>
+
+      <div class="info-card">
+        <p><strong>Saldo:</strong></p>
+        <p>{{ balance }} ETH</p>
+      </div>
+
+      <div class="info-card">
+        <p><strong>Transacciones Enviadas:</strong></p>
+        <p>{{ transactionCount }}</p>
+      </div>
+    </div>
+  
+    <div *ngIf="loading">
+      <p>Cargando información...</p>
+    </div>
+</div>
